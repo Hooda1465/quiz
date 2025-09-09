@@ -64,18 +64,18 @@ const reset = ()=>{
  
   return (
     <div className='container-fluid main-body'>
-     <div className='row vh-100 d-flex justify-content-center align-items-center '>
-      <div className='col-5 p-3 fourth rounded'>
+     <div className='row vh-100 justify-content-center align-items-center'>
+      <div className='col-5 p-3 fourth rounded shadow '>
      <h1>Quiz App</h1>
 
      <hr/>
      {result? 
      <>
 
-     <h2>{score > 2 ? "Result : Congratulation Manvik! you have Passed the exam." : "Result : Bad luck! you have Failed the exam." }</h2>
+     <h2 className='d-block m-auto align-self-center'>{score > 2 ? "Result : Congratulation! you have Passed the exam." : "Result : Bad luck! you have Failed the exam." }</h2>
      
-     <p>You have scored {score} out of 5.</p>
-     <buttonon onClick={reset} className='btn btn-info'>Reset</buttonon>
+     <p className='mt-5'>You have scored {score} out of 5.</p>
+     <button onClick={reset} className='btn mybutton mt-3'>Reset</button>
      </>
      
      :
